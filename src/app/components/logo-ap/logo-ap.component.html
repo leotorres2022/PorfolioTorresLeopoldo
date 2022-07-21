@@ -5,12 +5,13 @@
     </div>
 <div class="redes">
     
-        <a href=""> <img src="../../../assets/facebook.png" id="facebook"></a>
-        <a href=""> <img src="../../../assets/github.png" id="github"></a>
-        <a href=""> <img src="../../../assets/instagram.png" id="instagram"></a>
-        <a href=""> <img src="../../../assets/linkedin.png" id="linkedin"></a>
-        <a href=""> <img src="../../../assets/twitter.png" id="twitter"></a>
-  <button type="button" class="btn btn-outline-light "> Login</button>
+        <a href="https://www.facebook.com/leopoldomaximiliano.torres"> <img src="../../../assets/facebook.png" id="facebook"></a>
+        <a href="https://github.com/leotorres2022?tab=repositories"> <img src="../../../assets/github.png" id="github"></a>
+        <a href="https://www.instagram.com/leotorres2019/?hl=es"> <img src="../../../assets/instagram.png" id="instagram"></a>
+        <a href="https://www.linkedin.com/feed/"> <img src="../../../assets/linkedin.png" id="linkedin"></a>
+       
+  <button type="button" class="btn btn-outline-light " (click)="login()" *ngIf="!isLogged"> Login</button>
+  <button type="button" class="btn btn-outline-light " (click)="OnLogOut()" *ngIf="isLogged"> Cerrar Sesion</button>
     
 </div>
 </div> 

@@ -1,0 +1,18 @@
+<h1>Iniciar Seccion</h1>
+
+<form #f="ngForm" class="m-5" (ngSubmit)="OnLogin()" novalidate>
+      <div class="mb-3">
+          <label for="nombreUsuario" class="form-label">Usuario </label>
+      <input type="text" [(ngModel)]="nombreUsuario"  autocomplete= "off" 
+      name="nombreUsuario" class="form-control form-control-lg" id="nombreUsuario" [(ngModel)]="nombreUsuario" required/>
+     
+    </div>
+    <div class="mb-5">
+      <label for="password" class="form-label">Contraseña</label>
+     
+      <input type="password"  name="password" class="form-control form-control-lg" id="password" [(ngModel)]="password"required/>
+   
+    </div>
+   
+    <button type="submit" class="btn btn-primary" >Enviar</button>
+  </form>

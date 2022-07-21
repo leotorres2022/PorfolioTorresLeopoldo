@@ -1,24 +1,29 @@
 <div class="row">
     <h1>Educacion</h1>
-
-    <div  class="col-lg-11"></div>
-<ul>
- <li>
-     <h1>Educacion 1</h1> <h3>(Años)</h3>
-     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, officiis ex! At odio, commodi obcaecati, doloremque inventore, sint vitae non harum fugiat ipsam soluta eaque dolor enim labore est ullam.</p>
- </li>   
-</ul>
-<ul>
-    <li>
-        <h1>Educacion 2</h1> <h3>(Años)</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, officiis ex! At odio, commodi obcaecati, doloremque inventore, sint vitae non harum fugiat ipsam soluta eaque dolor enim labore est ullam.</p>
-    </li>   
-   </ul>
-   <ul>
-    <li>
-        <h1>Educacion 3</h1> <h3>(Años)</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, officiis ex! At odio, commodi obcaecati, doloremque inventore, sint vitae non harum fugiat ipsam soluta eaque dolor enim labore est ullam.</p>
-    </li>   
-   </ul>
-
-</div>
+    <div > <button class="agregar" *ngIf="isLogged" mat-mini-fab color="secondary" (click)="Agregar()"><mat-icon>adding </mat-icon></button>
+    </div>
+    
+        <div class="col-xs-2 col-sm-4 col-md-8 col-lg-12">
+            <table class="table table-white" >
+                     
+                <tbody>
+                    <tr *ngFor="let educacion of educacionlista">
+                    <td>{{educacion.centro}}</td>
+                    <td>{{educacion.titulo}}</td>
+                    <td>{{educacion.anio_ingreso}}</td>
+                    <td>{{educacion.anio_egreso}}</td>
+                    <td><button *ngIf="isLogged" mat-mini-fab color="accent"  [routerLink]="['/editar-educacion',educacion.id]"  ><mat-icon>edit</mat-icon></button>
+                      <button *ngIf="isLogged" mat-mini-fab color="warn" [routerLink]="['/eliminar-educacion',educacion.id]" ><mat-icon >delete</mat-icon></button>
+                    </td>
+                             
+                  </tr>
+                     
+                  
+                </tbody>
+                   
+              </table>  
+            
+            
+            
+            </div> 
+             

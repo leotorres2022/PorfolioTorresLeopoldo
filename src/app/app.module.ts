@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,24 +12,65 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HardComponent } from './components/hard/hard.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgregarEducacionComponent } from './components/educacion/agregar-educacion/agregar-educacion.component';
+import { EliminarEducacionComponent } from './components/educacion/eliminar-educacion/eliminar-educacion.component';
+
+/*angular Material*/
+import { MatSliderModule } from '@angular/material/slider';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
+import { EditarEducacionComponent } from './components/educacion/editar-educacion/editar-educacion.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { AgregarExperienciaComponent } from './components/experiencia/agregar-experiencia/agregar-experiencia.component';
+import { EliminarExperienciaComponent } from './components/experiencia/eliminar-experiencia/eliminar-experiencia.component';
+import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LogoApComponent,
-      BannerComponent,
+    BannerComponent,
     AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
     HardComponent,
     ProyectosComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    PortfolioComponent,
+    AgregarEducacionComponent,
+    EditarEducacionComponent,
+    EliminarEducacionComponent,
+    AgregarExperienciaComponent,
+    EliminarExperienciaComponent,
+    EditarExperienciaComponent,
+   
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({})
-  ],
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule, 
+    MatSliderModule,
+    MatIconModule,
+    MatTableModule, 
+     MatButtonModule
+  
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

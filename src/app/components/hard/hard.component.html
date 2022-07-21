@@ -1,99 +1,25 @@
 <div class="row">
     <h1>Hard & soft Skill</h1>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="85"
-    [radius]="100"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'orange'"
-    [imageSrc]= "'../assets/Bootstrap_logo.svg.png'"
-    [showImage]="true"
-    [imageWidth]="90"
-    [imageHeight]="90"
-    [innerStrokeColor]="'grey'"
-    [animation]="true"
-    [animationDuration]="500"
-  ></circle-progress>
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="30"
-    [radius]="100"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'orange'"
-    [imageSrc]= "'../assets/html.png'"
-    [showImage]="true"
-    [imageWidth]="90"
-    [imageHeight]="90"
-    [innerStrokeColor]="'grey'"
-    [animation]="true"
-    [animationDuration]="500"
-  ></circle-progress>
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="50"
-    [radius]="100"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'orange'"
-    [imageSrc]= "'../assets/Angular.png'"
-    [showImage]="true"
-    [imageWidth]="90"
-    [imageHeight]="90"
-    [innerStrokeColor]="'grey'"
-    [animation]="true"
-    [animationDuration]="500"
-  ></circle-progress>
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="85"
-    [radius]="100"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'orange'"
-    [imageSrc]= "'../assets/javascrip.jpg'"
-    [showImage]="true"
-    [imageWidth]="90"
-    [imageHeight]="90"
-    [innerStrokeColor]="'grey'"
-    [animation]="true"
-    [animationDuration]="500"
-  ></circle-progress>
-</div>
-<div class=" text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="85"
-    [radius]="100"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'orange'"
-    [imageSrc]= "'../assets/mysql.png'"
-    [showImage]="true"
-    [imageWidth]="90"
-    [imageHeight]="90"
-    [innerStrokeColor]="'grey'"
-    [animation]="true"
-    [animationDuration]="500"
-  ></circle-progress>
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="85"
-    [radius]="100"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'orange'"
-    [imageSrc]= "'../assets/spring boot.png'"
-    [showImage]="true"
-    [imageWidth]="90"
-    [imageHeight]="90"
-    [innerStrokeColor]="'grey'"
-    [animation]="true"
-    [animationDuration]="500"
-  ></circle-progress>
-</div>
-</div>
+    <div > <button class="agregar" *ngIf="isLogged" mat-mini-fab color="secondary" ><mat-icon>adding </mat-icon></button>
+    </div>
+    <div class="col-sm-4" *ngFor="let hard of hardLista"  >
+      <circle-progress 
+  [percent]="hard.porcentaje"
+  [radius]="100"
+  [outerStrokeWidth]="8"
+  [innerStrokeWidth]="4"
+  [outerStrokeColor]="'orange'"
+  [imageSrc]= "hard.img"
+  [showImage]="true"
+  [imageWidth]="80"
+  [imageHeight]="80"
+  [innerStrokeColor]="'grey'"
+  [animation]="true"
+  [animationDuration]="500"
+></circle-progress><h3>{{hard.nombre}}</h3>
+<div class="col-6"><img src="hard.img" alt=""></div>
+   
+       <button *ngIf="isLogged" mat-mini-fab color="accent"  ><mat-icon>edit</mat-icon></button>
+         <button *ngIf="isLogged" mat-mini-fab color="warn" ><mat-icon >delete</mat-icon></button>
+       </div>   
+   </div>

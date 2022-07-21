@@ -13,9 +13,13 @@ div{
     font-weight: bold;
     margin-top: 10%;
     margin-left: 0px;
-   
-
 }
+
+h1,h3{display: inline;
+    text-align: center; 
+    color: #f0f0f0;
+ 
+  }
 
 /*estilo de la foto de perfil*/
 @media (min-width:576px)
