@@ -1,15 +1,19 @@
-<div class="row">
-    
-    <h1>Proyectos Realizados</h1>
-
-    <div  class="contenedor"></div>
-    <div class="text-center col-sm-12 col-md-7 col-lg-7 parte1"></div>
-    <div> 
-        <h3>Proyecto 1</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quia esse velit nam distinctio cupiditate quaerat quos amet! Quos sed accusamus ut porro eum quam dicta cumque. Quis, dolorem eius!</p>
-    
+<div   class="row">
+    <h1 >Proyectos</h1>
+    <div > <button class="agregar" *ngIf="isLogged" mat-mini-fab color="secondary" (click)="AgregarProy()"><mat-icon>adding </mat-icon></button>
     </div>
-    <div></div>
+      
+    <div class="col-xs-2 col-sm-4 col-md-8 col-lg-12">
+            <table class="table table-white" >
+                 <tbody>
+                  <tr *ngFor="let proyectos of proyectosLista">
+                  <td>{{proyectos.nombre}}</td>
+                  <td>{{proyectos.descripcion}}</td>
+                  <td><button *ngIf="isLogged" mat-mini-fab color="accent"  [routerLink]="['/editar-proyectos',proyectos.id]"  ><mat-icon>edit</mat-icon></button>
+                    <button *ngIf="isLogged" mat-mini-fab color="warn" [routerLink]="['/eliminar-proyectos',proyectos.id]" ><mat-icon >delete</mat-icon></button>
+                  </td>
+                           
+                </tr>
 
-
-</div>
+              </tbody>
+          </table>

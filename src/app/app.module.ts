@@ -31,6 +31,9 @@ import { interceptorProvider } from './service/interceptor-service';
 import { AgregarExperienciaComponent } from './components/experiencia/agregar-experiencia/agregar-experiencia.component';
 import { EliminarExperienciaComponent } from './components/experiencia/eliminar-experiencia/eliminar-experiencia.component';
 import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
+import { EditarProyectosComponent } from './components/proyectos/editar-proyectos/editar-proyectos.component';
+import { AgregarProyectosComponent } from './components/proyectos/agregar-proyectos/agregar-proyectos.component';
+import { EliminarProyectosComponent } from './components/proyectos/eliminar-proyectos/eliminar-proyectos.component';
 
 
 
@@ -54,6 +57,9 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
     AgregarExperienciaComponent,
     EliminarExperienciaComponent,
     EditarExperienciaComponent,
+    EditarProyectosComponent,
+    AgregarProyectosComponent,
+    EliminarProyectosComponent,
    
  
   ],
