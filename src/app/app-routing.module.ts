@@ -11,6 +11,10 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
 import { AgregarProyectosComponent } from './components/proyectos/agregar-proyectos/agregar-proyectos.component';
 import { EditarProyectosComponent } from './components/proyectos/editar-proyectos/editar-proyectos.component';
 import { EliminarProyectosComponent } from './components/proyectos/eliminar-proyectos/eliminar-proyectos.component';
+import { AgregarHardComponent } from './components/hard/agregar-hard/agregar-hard.component';
+import { EditarHardComponent } from './components/hard/editar-hard/editar-hard.component';
+import { EliminarHardComponent } from './components/hard/eliminar-hard/eliminar-hard.component';
+import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de/editar-acerca-de.component';
 
 const routes: Routes = [
   {path:'portfolio',component:PortfolioComponent},
@@ -18,12 +22,16 @@ const routes: Routes = [
   {path:'agregar-educacion',component:AgregarEducacionComponent},
   {path:'agregar-experiencia',component:AgregarExperienciaComponent},
   {path:'agregar-proyectos',component:AgregarProyectosComponent},
+  {path:'agregar-hard',component:AgregarHardComponent},
   {path:'editar-educacion/:id',component:EditarEducacionComponent},
   {path:'editar-experiencia/:id',component:EditarExperienciaComponent},
   {path:'editar-proyectos/:id',component:EditarProyectosComponent},
+  {path:'editar-acerca-de/:id',component:EditarAcercaDeComponent},
+  {path:'editar-hard/:id',component:EditarHardComponent},
   {path:'eliminar-educacion/:id',component:EliminarEducacionComponent},
   {path:'eliminar-experiencia/:id',component:EliminarExperienciaComponent},
   {path:'eliminar-proyectos/:id',component:EliminarProyectosComponent},
+  {path:'eliminar-hard/:id',component:EliminarHardComponent},
   {path:'',redirectTo:'portfolio',pathMatch:'full'}];
 
 @NgModule({

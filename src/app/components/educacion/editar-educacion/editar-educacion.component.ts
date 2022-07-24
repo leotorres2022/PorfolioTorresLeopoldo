@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EducacionService } from 'src/app/service/educacion.service';
 import { Educacion} from 'src/app/model/educacion.model';
 import { ActivatedRoute, Router } from '@angular/router';
-//import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-editar-educacion',

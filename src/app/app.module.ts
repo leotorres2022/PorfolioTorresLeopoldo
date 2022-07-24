@@ -34,6 +34,10 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
 import { EditarProyectosComponent } from './components/proyectos/editar-proyectos/editar-proyectos.component';
 import { AgregarProyectosComponent } from './components/proyectos/agregar-proyectos/agregar-proyectos.component';
 import { EliminarProyectosComponent } from './components/proyectos/eliminar-proyectos/eliminar-proyectos.component';
+import { EliminarHardComponent } from './components/hard/eliminar-hard/eliminar-hard.component';
+import { EditarHardComponent } from './components/hard/editar-hard/editar-hard.component';
+import { AgregarHardComponent } from './components/hard/agregar-hard/agregar-hard.component';
+import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de/editar-acerca-de.component';
 
 
 
@@ -60,6 +64,10 @@ import { EliminarProyectosComponent } from './components/proyectos/eliminar-proy
     EditarProyectosComponent,
     AgregarProyectosComponent,
     EliminarProyectosComponent,
+    EliminarHardComponent,
+    EditarHardComponent,
+    AgregarHardComponent,
+    EditarAcercaDeComponent,
    
  
   ],

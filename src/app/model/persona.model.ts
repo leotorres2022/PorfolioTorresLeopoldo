@@ -1,15 +1,14 @@
-export class persona
+export class Persona
 {id?:number;
-nombre:String;
-apellido:String;
-img:String;
-titulo:String;
-informacion:String;
+nombre:string;
+apellido:string;
 
-constructor(nombre:String,apellido:String,img:String,titulo:String,informacion:String)
+titulo:string;
+informacion:string;
+
+constructor(nombre:string,apellido:string,titulo:string,informacion:string)
 {this.nombre = nombre;
  this.apellido = apellido;
- this.img = img;
  this.titulo = titulo;
  this.informacion = informacion;
 }

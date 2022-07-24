@@ -1,16 +1,22 @@
 
     <div class="row">
+     
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
             <img src="../../../assets/fotoPerfil.jpeg" class="img-fluid" id="fotoDePerfil">
+            
         </div> 
         
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <p id="nombre">{{persona.nombre}} {{persona.apellido}} </p>
-            <p id="titulo">{{persona.titulo}}</p>
+            <p id="nombre">{{persona[0].nombre}} {{persona[0].apellido}} </p>
+            <p id="titulo">{{persona[0].titulo}}</p>
         </div>
       <div  class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
             <h1>Acerca de mi</h1>
-            <p id="informacion">{{persona.informacion}}</p>  </div>
+            <p id="informacion">{{persona[0].informacion}}</p>
+            <div><button *ngIf="isLogged" mat-mini-fab color="accent"   [routerLink]="['/editar-acerca-de',persona[0].id]"  ><mat-icon>edit</mat-icon></button>
+            </div>
+              
+        </div>
 </div>
 
 

@@ -1,6 +1,6 @@
 <div class="row">
     <h1>Hard & soft Skill</h1>
-    <div > <button class="agregar" *ngIf="isLogged" mat-mini-fab color="secondary" ><mat-icon>adding </mat-icon></button>
+    <div > <button class="agregar" *ngIf="isLogged" mat-mini-fab color="secondary" (click)="AgregarHard()"><mat-icon>adding </mat-icon></button>
     </div>
     <div class="col-sm-4" *ngFor="let hard of hardLista"  >
       <circle-progress 
@@ -19,7 +19,7 @@
 ></circle-progress><h3>{{hard.nombre}}</h3>
 <div class="col-6"><img src="hard.img" alt=""></div>
    
-       <button *ngIf="isLogged" mat-mini-fab color="accent"  ><mat-icon>edit</mat-icon></button>
-         <button *ngIf="isLogged" mat-mini-fab color="warn" ><mat-icon >delete</mat-icon></button>
+       <button *ngIf="isLogged" [routerLink]="['/editar-hard',hard.id]" mat-mini-fab color="accent"  ><mat-icon>edit</mat-icon></button>
+         <button *ngIf="isLogged" [routerLink]="['/eliminar-hard',hard.id]"mat-mini-fab color="warn" ><mat-icon >delete</mat-icon></button>
        </div>   
    </div>
